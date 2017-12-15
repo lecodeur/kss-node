@@ -166,7 +166,8 @@ class KssBuilderBaseNunjucks extends KssBuilderBase {
     // Converts a filename into a Handlebars partial name.
     options.filenameToTemplateRef = (filename) => {
       // Return the filename without the full path or the file extension.
-      return path.basename(filename, path.extname(filename));
+      // return path.basename(filename, path.extname(filename));
+      return filename;
     };
 
     return this.buildGuide(styleGuide, options);
